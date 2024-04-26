@@ -1,7 +1,7 @@
 # Contributing Setup
 
 ---This documents the steps a maintainer or developer would follow to work on the library in their development environment---
----Update the details for this project, replacing "repotemplate" and anything else that needs changed---
+---Update the details for this project, replacing "Ecommerce.Common" and anything else that needs changed---
 
 ## Required Software
 
@@ -53,7 +53,7 @@ To run the Sample app Admin customization in development mode, add the following
 
 ```json
 "CMSAdminClientModuleSettings": {
-  "kentico-xperience-integrations-repotemplate": {
+  "kentico-xperience-integrations-Ecommerce.Common": {
     "Mode": "Proxy",
     "Port": 3009
   }
@@ -68,7 +68,7 @@ To run the Sample app Admin customization in development mode, add the following
    - `refactor/` - for restructuring of existing features
    - `fix/` - for bugfixes
 
-1. Run `dotnet format` against the `src/Kentico.Xperience.RepoTemplate` project
+1. Run `dotnet format` against the `src/Kentico.Xperience.Ecommerce.Common` project
 
    > use `dotnet: format` VS Code task.
 
