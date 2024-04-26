@@ -7,7 +7,7 @@ using CMS.Helpers;
 namespace Kentico.Xperience.Ecommerce.Common.ContentItemSynchronization;
 
 /// <summary>
-/// Synchronization base for content items
+/// Synchronization base for content items.
 /// </summary>
 public abstract class ContentItemSynchronizationBase
 {
@@ -22,7 +22,7 @@ public abstract class ContentItemSynchronizationBase
 
 
     /// <summary>
-    /// Content item display name with max length of <see cref="NAME_LENGTH"/>
+    /// Content item display name with max length of <see cref="NAME_LENGTH"/>.
     /// </summary>
     public string DisplayName =>
         DisplayNameInternal.Length > NAME_LENGTH ? (DisplayNameInternal?[..NAME_LENGTH] ?? string.Empty) : DisplayNameInternal;
@@ -32,7 +32,7 @@ public abstract class ContentItemSynchronizationBase
     /// Generate dictionary where keys are property names and values are property values.
     /// <see cref="ContentItemSynchronizationBase"/> properties are excluded.
     /// </summary>
-    /// <returns></returns>
+    /// <returns>Dictionary where key = property name and value = property value.</returns>
     public virtual Dictionary<string, object?> ToDict()
     {
         var baseProperties = typeof(ContentItemSynchronizationBase)
@@ -111,6 +111,7 @@ public abstract class ContentItemSynchronizationBase
 
         return false;
     }
+
 
     protected void SetPropsIfDiff<T>(T source, T dest, string key, Dictionary<string, object?> props)
     {

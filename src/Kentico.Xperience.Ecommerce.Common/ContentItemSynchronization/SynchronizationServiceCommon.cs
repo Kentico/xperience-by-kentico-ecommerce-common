@@ -3,12 +3,14 @@
 using CMS.ContentEngine;
 using CMS.Core;
 
-using Kentico.Xperience.Ecommerce.Common.ContentItemSynchronization.Interfaces;
-
 using Path = CMS.IO.Path;
 
 namespace Kentico.Xperience.Ecommerce.Common.ContentItemSynchronization;
 
+/// <summary>
+/// Common service base functionality for synchronization of content items.
+/// </summary>
+/// <param name="httpClientFactory"></param>
 public abstract class SynchronizationServiceCommon(IHttpClientFactory httpClientFactory)
 {
     protected (IEnumerable<TStoreItem> ToCreate, IEnumerable<(TStoreItem StoreItem, TContentItem ContentItem)> ToUpdate,
@@ -32,6 +34,7 @@ public abstract class SynchronizationServiceCommon(IHttpClientFactory httpClient
 
         return (toCreate, toUpdate, toDelete);
     }
+
 
     protected async Task<ContentItemAssetMetadataWithSource> CreateAssetMetadata(string url, string name)
     {
