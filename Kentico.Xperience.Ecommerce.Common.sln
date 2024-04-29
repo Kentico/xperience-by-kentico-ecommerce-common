@@ -23,6 +23,12 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "build", "build", "{12AA74B2
 		nuget.config = nuget.config
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{0736A0CA-FC51-4306-AF0E-B28E810FDA32}"
+	ProjectSection(SolutionItems) = preProject
+		docs\Usage-Guide.md = docs\Usage-Guide.md
+		docs\Contributing-Setup.md = docs\Contributing-Setup.md
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

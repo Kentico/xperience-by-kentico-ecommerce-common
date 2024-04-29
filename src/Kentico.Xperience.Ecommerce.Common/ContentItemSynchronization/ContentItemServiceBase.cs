@@ -25,6 +25,7 @@ public class ContentItemServiceBase : IContentItemService
     }
 
 
+    ///<inheritdoc/>
     public async Task<int> AddContentItem(ContentItemAddParams addParams)
     {
         ArgumentNullException.ThrowIfNull(addParams);
@@ -44,6 +45,7 @@ public class ContentItemServiceBase : IContentItemService
     }
 
 
+    ///<inheritdoc/>
     public async Task<bool> UpdateContentItem(ContentItemUpdateParams updateParams)
     {
         var contentItemManager = ContentItemManagerFactory.Create(updateParams.UserID);
@@ -74,6 +76,7 @@ public class ContentItemServiceBase : IContentItemService
     }
 
 
+    ///<inheritdoc/>
     public async Task<IEnumerable<T>> GetContentItems<T>(string contentType, Action<ContentTypeQueryParameters> queryParams)
         where T : IContentItemFieldsSource, new()
     {
@@ -84,10 +87,12 @@ public class ContentItemServiceBase : IContentItemService
     }
 
 
+    ///<inheritdoc/>
     public async Task<IEnumerable<T>> GetContentItems<T>(string contentType)
          where T : IContentItemFieldsSource, new() => await GetContentItems<T>(contentType, 0);
 
 
+    ///<inheritdoc/>
     public async Task<IEnumerable<T>> GetContentItems<T>(string contentType, int linkedItemsLevel)
         where T : IContentItemFieldsSource, new()
     {
@@ -98,6 +103,7 @@ public class ContentItemServiceBase : IContentItemService
     }
 
 
+    ///<inheritdoc/>
     public async Task DeleteContentItem(int contentItemID, string languageName, int userID)
     {
         var contentItemManager = ContentItemManagerFactory.Create(userID);
@@ -105,6 +111,7 @@ public class ContentItemServiceBase : IContentItemService
     }
 
 
+    ///<inheritdoc/>
     public async Task DeleteContentItems(IEnumerable<int> contentItemIDs, string languageName, int userID)
     {
         if (!contentItemIDs.Any())
