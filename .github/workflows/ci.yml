@@ -1,6 +1,16 @@
 name: "CI: Build and Test"
 
 on:
+  push:
+    branches: [main]
+    paths:
+      - "**.cs"
+      - "**.tsx"
+      - "**.js"
+      - "**.csproj"
+      - "**.props"
+      - "**.targets"
+      - "**.sln"
   pull_request:
     branches: [main]
     paths:
