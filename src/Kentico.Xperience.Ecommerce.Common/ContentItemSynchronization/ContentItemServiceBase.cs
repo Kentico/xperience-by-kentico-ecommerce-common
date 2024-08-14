@@ -68,7 +68,7 @@ public class ContentItemServiceBase : IContentItemService
         return versionStatus switch
         {
             VersionStatus.Published => await contentItemManager.TryPublish(updateParams.ContentItemID, updateParams.LanguageName),
-            VersionStatus.Archived => await contentItemManager.TryArchive(updateParams.ContentItemID, updateParams.LanguageName),
+            VersionStatus.Unpublished => await contentItemManager.TryUnpublish(updateParams.ContentItemID, updateParams.LanguageName),
             VersionStatus.InitialDraft => true,
             VersionStatus.Draft => true,
             _ => true,
