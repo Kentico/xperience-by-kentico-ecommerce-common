@@ -48,8 +48,8 @@ stages:
           - name: Configuration
             value: Release
 
-          - name: ProjectPath
-            value: src/PROJECT_NAME/PROJECT_NAME.csproj
+          - name: ProjectPath          
+            value: src/Kentico.Xperience.Ecommerce.Common/Kentico.Xperience.Ecommerce.Common.csproj
 
         steps:
           - task: DotNetCoreCLI@2
