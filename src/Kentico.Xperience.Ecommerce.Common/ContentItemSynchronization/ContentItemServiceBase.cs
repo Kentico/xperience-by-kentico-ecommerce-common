@@ -34,7 +34,8 @@ public class ContentItemServiceBase : IContentItemService
                                             addParams.ContentItem.ContentTypeName,
                                             addParams.ContentItem.GenerateCodeName(),
                                             addParams.ContentItem.DisplayName,
-                                            addParams.LanguageName);
+                                            addParams.LanguageName,
+                                            addParams.WorkspaceName);
         var itemData = new ContentItemData(addParams.ContentItem.ToDict());
 
         var contentItemManager = ContentItemManagerFactory.Create(addParams.UserID);
