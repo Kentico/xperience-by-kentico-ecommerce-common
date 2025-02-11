@@ -6,6 +6,7 @@
     <DisableImplicitNuGetFallbackFolder>true</DisableImplicitNuGetFallbackFolder>
   </PropertyGroup>
   <ItemGroup>
+    <PackageVersion Include="Kentico.Xperience.Admin" Version="30.0.1" />
     <PackageVersion Include="Kentico.Xperience.Core" Version="30.0.1" />
     <PackageVersion Include="Microsoft.Extensions.Http" Version="8.0.0" />
     <PackageVersion Include="SonarAnalyzer.CSharp" Version="9.23.0.88079" />
