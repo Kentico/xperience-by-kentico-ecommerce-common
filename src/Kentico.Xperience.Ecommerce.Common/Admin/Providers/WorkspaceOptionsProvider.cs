@@ -1,6 +1,7 @@
 ﻿using CMS.DataEngine;
 using CMS.Helpers;
 using CMS.Workspaces;
+
 using Kentico.Xperience.Admin.Base.FormAnnotations;
 
 namespace Kentico.Xperience.Ecommerce.Common.Admin.Providers
