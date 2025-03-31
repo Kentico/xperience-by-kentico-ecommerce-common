@@ -41,6 +41,8 @@ public class ContentFolderWorkspaceConfigurator : FormComponentConfigurator<Cont
         return await base.ConfigureValue(formFieldValueProvider, changedFieldName, cancellationToken);
     }
 }
+
+
 internal class Invisible : VisibilityCondition
 {
     public override bool Evaluate(IFormFieldValueProvider formFieldValueProvider)
