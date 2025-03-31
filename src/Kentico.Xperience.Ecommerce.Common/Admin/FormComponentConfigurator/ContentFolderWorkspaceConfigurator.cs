@@ -31,7 +31,9 @@ public class ContentFolderWorkspaceConfigurator : FormComponentConfigurator<Cont
 
     public override async Task<object> ConfigureValue(IFormFieldValueProvider formFieldValueProvider, string changedFieldName, CancellationToken cancellationToken)
     {
-        if (changedFieldName == nameof(SynchronizationSettingsModel.WorkspaceName) && formFieldValueProvider.TryGet(nameof(SynchronizationSettingsModel.WorkspaceName), out string? workspaceName) && !string.IsNullOrEmpty(workspaceName))
+        if (string.Equals(changedFieldName, nameof(SynchronizationSettingsModel.WorkspaceName), StringComparison.Ordinal)
+            && formFieldValueProvider.TryGet(nameof(SynchronizationSettingsModel.WorkspaceName), out string? workspaceName)
+            && !string.IsNullOrEmpty(workspaceName))
         {
             var newRoot = await contentFolderManager.GetRoot(workspaceName, cancellationToken);
             return newRoot.ContentFolderID;
