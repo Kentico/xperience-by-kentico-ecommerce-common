@@ -13,7 +13,7 @@ Currently contains one library `Kentico.Xperience.Ecommerce.Common`.
 
 | Xperience Version | Library Version |
 | ----------------- | --------------- |
-| >= 30.0.1         | 2.0.0           |
+| >= 30.0.1         | >= 2.0.0        |
 | >= 29.0.1         | 1.0.0           |
 
 ### Dependencies
