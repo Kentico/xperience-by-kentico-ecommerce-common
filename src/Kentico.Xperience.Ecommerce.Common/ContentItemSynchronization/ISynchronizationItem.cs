@@ -11,7 +11,7 @@ public interface ISynchronizationItem<TContentItem>
     /// <param name="contentItem"></param>
     /// <param name="modifiedProps"></param>
     /// <returns>True if any property was modified. Otherwise False.</returns>
-    public bool GetModifiedProperties(TContentItem contentItem, out Dictionary<string, object?> modifiedProps);
+    bool GetModifiedProperties(TContentItem contentItem, out Dictionary<string, object?> modifiedProps);
 }
 
 
@@ -27,7 +27,7 @@ public interface ISynchronizationItem<TDto, in TContentItem>
     /// <summary>
     /// Dto item, typically object from Ecommerce platform API
     /// </summary>
-    public TDto Item { get; set; }
+    TDto Item { get; set; }
 
 
     /// <summary>

@@ -9,5 +9,5 @@ public interface IItemIdentifier<out TType>
     /// <summary>
     /// External identifier.
     /// </summary>
-    public TType ExternalId { get; }
+    TType ExternalId { get; }
 }
