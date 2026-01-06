@@ -108,7 +108,7 @@ public class ContentItemServiceBase : IContentItemService
     public async Task DeleteContentItem(int contentItemID, string languageName, int userID)
     {
         var contentItemManager = ContentItemManagerFactory.Create(userID);
-        await contentItemManager.Delete(contentItemID, languageName);
+        await contentItemManager.Delete(new DeleteContentItemParameters(contentItemID, languageName));
     }
 
 
@@ -124,7 +124,7 @@ public class ContentItemServiceBase : IContentItemService
 
         foreach (int contentItemID in contentItemIDs)
         {
-            await contentItemManager.Delete(contentItemID, languageName);
+            await contentItemManager.Delete(new DeleteContentItemParameters(contentItemID, languageName));
         }
     }
 }
